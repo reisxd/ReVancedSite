@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ReVancedSite.Shared", "ReVancedSite\ReVancedSite.Shared\ReVancedSite.Shared.shproj", "{6279C845-92F8-4333-AB99-3D213163593C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{3B665DE7-596C-48A4-B02C-B6CCA08BF2E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReVancedSite.Wasm", "ReVancedSite\ReVancedSite.Wasm\ReVancedSite.Wasm.csproj", "{AF68FDB8-51AF-4054-A10E-929C6C1ABC27}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ReVancedSite\ReVancedSite.Shared\ReVancedSite.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
+		ReVancedSite\ReVancedSite.Shared\ReVancedSite.Shared.projitems*{af68fdb8-51af-4054-a10e-929c6c1abc27}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF68FDB8-51AF-4054-A10E-929C6C1ABC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF68FDB8-51AF-4054-A10E-929C6C1ABC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF68FDB8-51AF-4054-A10E-929C6C1ABC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF68FDB8-51AF-4054-A10E-929C6C1ABC27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF68FDB8-51AF-4054-A10E-929C6C1ABC27} = {3B665DE7-596C-48A4-B02C-B6CCA08BF2E6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {422D7EC8-3E01-49FB-A40C-72AE130B4145}
+	EndGlobalSection
+EndGlobal

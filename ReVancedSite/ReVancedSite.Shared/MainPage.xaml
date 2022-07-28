@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="ReVancedSite.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReVancedSite"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView x:Name="Header" PaneDisplayMode="Top"
+    SelectionFollowsFocus="Enabled" IsBackButtonVisible="Collapsed" IsSettingsVisible="False"
+                       ItemInvoked="Header_ItemInvoked" Loaded="Header_Loaded">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="Logo">
+                    <NavigationViewItem.Content>
+                        <StackPanel Orientation="Horizontal" Margin="-8.5,0">
+                            <Ellipse Width="35" Height="35" Margin="-3.5,0">
+                                <Ellipse.Fill>
+                                    <ImageBrush AlignmentX="Right"  x:Name="img"></ImageBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </StackPanel>
+                    </NavigationViewItem.Content>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem Icon="Home" Content="Home" Tag="Home" />
+                <NavigationViewItem Icon="Download" Content="Download" Tag="Download" />
+                <NavigationViewItem Icon="Bookmarks" Content="Documents" Tag="Docs" />
+                <NavigationViewItem Content="Credits" x:Name="Credits" />
+            </NavigationView.FooterMenuItems>
+            <Frame x:Name="contentFrame"/>
+        </NavigationView>
+    </Grid>
+</Page>
