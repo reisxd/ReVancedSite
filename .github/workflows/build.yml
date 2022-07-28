@@ -7,7 +7,7 @@ on:
   workflow_dispatch:  # Allows workflow to be ran via a button
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     name: Build
     env:
       config: 'Release'
@@ -21,7 +21,7 @@ jobs:
     - name: Restore Dependencies
       run: dotnet restore ./ReVancedSite/ReVancedSite.Wasm/ReVancedSite.Wasm.csproj
     - name: Build 
-      run: dotnet build ./ReVancedSite/ReVancedSite.Wasm/ReVancedSite.Wasm.csproj --no-restore -f $framework -c $config
+      run: dotnet build ./ReVancedSite/ReVancedSite.Wasm/ReVancedSite.Wasm.csproj --no-restore -c $config
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
       if: github.event_name == 'workflow_dispatch' # Only deploy if Workflow manually ran
@@ -30,7 +30,7 @@ jobs:
         path: ./ReVancedSite/ReVancedSite.Wasm/bin/${{env.config}}/${{env.framework}}/dist/        
   deploy:
     needs: build 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     name: Deploy
     if: github.event_name == 'workflow_dispatch' # Only deploy if Workflow manually ran
     steps:
