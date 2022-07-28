@@ -21,7 +21,7 @@ jobs:
     - name: Restore Dependencies
       run: dotnet restore ./ReVancedSite/ReVancedSite.Wasm/ReVancedSite.Wasm.csproj
     - name: Build 
-      run: dotnet build ./ReVancedSite/ReVancedSite.Wasm/ReVancedSite.Wasm.csproj --no-restore -c $config
+      run: dotnet build ./ReVancedSite/ReVancedSite.Wasm/ReVancedSite.Wasm.csproj --no-restore -c Release
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
       if: github.event_name == 'workflow_dispatch' # Only deploy if Workflow manually ran
