@@ -18,6 +18,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
+    - name: Install Uno Platform
+      run: dotnet new -i Uno.ProjectTemplates.Dotnet
     - name: Restore Dependencies
       run: dotnet restore ./ReVancedSite/ReVancedSite.Wasm/ReVancedSite.Wasm.csproj
     - name: Build 
